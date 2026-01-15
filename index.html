@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinels Web Book</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #1a1a1a;
+            margin-top: 50px;
+            font-size: 3em;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Botones mejorados */
+        button {
+            padding: 14px 30px;
+            margin: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(145deg, #4CAF50, #3e8e41);
+            color: white;
+            box-shadow: 0 6px #2e7031, inset 0 0 8px rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px #2e7031, inset 0 0 12px rgba(255,255,255,0.3);
+            background: linear-gradient(145deg, #5cbf60, #449b45);
+        }
+
+        button:active {
+            transform: translateY(2px);
+            box-shadow: 0 4px #2e7031, inset 0 0 6px rgba(255,255,255,0.2);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Secciones */
+        #webbook-section, #info-section, #wiki-section {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 900px;
+        }
+
+        /* Contenido del Web Book */
+        #webbook-content {
+            text-align: left;
+            border: 1px solid #ccc;
+            padding: 20px;
+            height: 500px;
+            overflow-y: scroll;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        #webbook-content h2 {
+            margin-top: 30px;
+            color: #333;
+        }
+
+        /* Sección Wiki simplificada */
+        #wiki-section div {
+            text-align: left;
+            margin-top: 20px;
+            max-width: 900px;
+            margin-left:auto;
+            margin-right:auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Botones en inicio */
+        #main-buttons {
+            margin-top: 50px;
+            display: inline-block;
+            background-color: rgba(255,255,255,0.95);
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 2px 2px 25px rgba(0,0,0,0.25);
+        }
+
+        #main-buttons button {
+            width: 220px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-title">Sentinels Web Book</h1>
+
+    <!-- Inicio con botones -->
+    <div id="main-buttons">
+        <button onclick="showInfo()">Whats Sentinels?</button>
+        <button onclick="openWebBook()">Open Web Book</button>
+        <button onclick="showWiki()">Wiki</button>
+    </div>
+
+    <!-- Sección de información -->
+    <div id="info-section" class="hidden">
+        <p>Sentinels is a fiction series that will be published on YT by this guy here: 
+            <a href="https://www.youtube.com/@alejandrocamachovaldayo5138" target="_blank">My YouTube Channel</a>, will be released really soon, so for now you can enjoy this Web book :)</p>
+        <button onclick="goBack()">Go back</button>
+    </div>
+
+    <!-- Sección Web Book -->
+    <div id="webbook-section" class="hidden">
+        <button onclick="goBack()">Go back</button>
+        <div id="webbook-content">
+            <h2>Chapter 1 - The Beginning</h2>
+            <p>Everything starts when Mixed reaches home after a long scholar Trip -Jita- Yo, how are you?, you look hella tired, get some rest- Mixed goes to his bedroom and rests, then his wife [Amy] walks in -Amy- Hey!, where's Mixed? I heard you talking to him- -Jita- He's in his bedroom, he's tired, say hi to him, I think he missed you- [Amy walks into Mixed's room] -Amy- Hey Mixed! how are you? [Amy remembers Mixed has communication problems] Oh shoot, my bad, I hope you had fun there… So imma leave you right now- [Amy leaves]</p>
+
+            <h2>Chapter 2 - The Warning...</h2>
+            <p>[Amber opens the roughly cuz it is raining outside] -Jita- Hey!, whats wrong? [asks J with curiosity], -Amber- It started raining out of nowhere, wheres Mixed, i need to talk to him, its really important...- -Jita- Hes in his bedroom, hes so tired- -Amber- i dont give a fuck, Something really big its coming, and we need to be prepared!- [says Amber anxiously] -Jita- Tell me, i Will tell Mixed later- -Amber- Today when i was smoking a cigarette right down the Street i saw something really dark, it was shinning red and Since Mixed has fighted a lot of Stuff, i wanted to ask him if he knew something about it...- -Jita- Alr, thats a lot of information… imma tell him tomorrow, and i hope hes feeling ok, he was really serious this morning...- </p>
+
+            <h2>Chapter 3 - Preparation</h2>
+            <p>Texto del capítulo 3...</p>
+
+            <h2>Chapter 4 - The Exploration</h2>
+            <p>Texto del capítulo 4...</p>
+
+            <h2>Chapter 5 - The Decision</h2>
+            <p>Texto del capítulo 5...</p>
+
+            <h2>Chapter 6 - The Chase</h2>
+            <p>Texto del capítulo 6...</p>
+
+            <h2>Chapter 7 - SENTINELS BASE</h2>
+            <p>Texto del capítulo 7...</p>
+
+            <h2>Chapter 8 - The Encounter</h2>
+            <p>Texto del capítulo 8...</p>
+
+            <h2>Chapter 9 - The Final Battle</h2>
+            <p>Texto del capítulo 9...</p>
+
+            <h2>Chapter 10 - The New Beginnings</h2>
+            <p>Texto del capítulo 10...</p>
+        </div>
+    </div>
+
+    <!-- Sección Wiki -->
+    <div id="wiki-section" class="hidden">
+        <button onclick="goBack()">Go back</button>
+        <div>
+            <h2>Wiki</h2>
+            <p><strong>Mixed:</strong> Husband of Amy, the best friend of J and the SON of Amber [Which her husband died], he was born with Communication problems and the only way he can speak its through paper or a phone.</p>
+            <p><strong>Jita:</strong> Father of Amy, Mixed's Trainer and the friend of Amber, hes Extremely Clever and made the cure against Cancer in 2023.</p>
+            <p><strong>Amy:</strong> The wife of Mixed, The daughter of J, and the Best friend of Amber, she was an experiment, she haves a Shark Tail and its really Clever too [Not Like mixed that hes so stupid].</p>
+            <p><strong>Amber:</strong> The Strongest of the Group, she doesnt have powers, but shes extremely fast and strong, she uses a bat to hit her enemies.</p>
+        </div>
+    </div>
+
+    <script>
+        function showInfo() {
+            hideAll();
+            document.getElementById('info-section').classList.remove('hidden');
+        }
+
+        function openWebBook() {
+            hideAll();
+            document.getElementById('webbook-section').classList.remove('hidden');
+        }
+
+        function showWiki() {
+            hideAll();
+            document.getElementById('wiki-section').classList.remove('hidden');
+        }
+
+        function goBack() {
+            hideAll();
+            document.getElementById('main-buttons').classList.remove('hidden');
+        }
+
+        function hideAll() {
+            document.getElementById('main-buttons').classList.add('hidden');
+            document.getElementById('info-section').classList.add('hidden');
+            document.getElementById('webbook-section').classList.add('hidden');
+            document.getElementById('wiki-section').classList.add('hidden');
+        }
+    </script>
+
+</body>
+</html>
